@@ -13,12 +13,12 @@ function saveCurrentTime(evt) {
   //   console.log(`You've watched ${Number.parseInt(evt.percent * 100)}% of video`);
 }
 
-try {
-  savedTime = JSON.parse(localStorage.getItem(TIME_KEY));
-} catch (error) {
-  savedTime = 0;
-}
+// try {
+//   savedTime = JSON.parse(localStorage.getItem(TIME_KEY));
+// } catch (error) {
+//   savedTime = 0;
+// }
 
-// savedTime = JSON.parse(localStorage.getItem(TIME_KEY)) || 0;
+savedTime = JSON.parse(localStorage.getItem(TIME_KEY)) || 0;
 
 player.setCurrentTime(savedTime);
